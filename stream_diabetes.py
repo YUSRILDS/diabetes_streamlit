@@ -14,14 +14,14 @@ uploaded_file2 = st.file_uploader("Upload Gambar 2", type=["jpg", "png", "jpeg"]
 if uploaded_file1 is not None and uploaded_file2 is not None:
     col1, col2 = st.columns(2)
     with col1:
-        st.image(uploaded_file1, caption='Gambar 1', use_column_width=True, width=50)
+        st.image(uploaded_file1, caption='Gambar 1', width=150)
     with col2:
-        st.image(uploaded_file2, caption='Gambar 2', use_column_width=True, width=50)
+        st.image(uploaded_file2, caption='Gambar 2', width=150)
 elif uploaded_file1 is not None:
-    st.image(uploaded_file1, caption='Gambar 1', use_column_width=True, width=50)
+    st.image(uploaded_file1, caption='Gambar 1', width=150)
 elif uploaded_file2 is not None:
-    st.image(uploaded_file2, caption='Gambar 2', use_column_width=True, width=50)
-
+    st.image(uploaded_file2, caption='Gambar 2', width=150)
+    
 # membagi kolom
 col1, col2 = st.columns(2)
 
