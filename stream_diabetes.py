@@ -8,19 +8,19 @@ diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
 st.title('Prediksi Diabetes')
 
 # menginput dan menampilkan gambar
-uploaded_file1 = st.file_uploader("Upload Gambar 1", type=["jpg", "png", "jpeg"])
-uploaded_file2 = st.file_uploader("Upload Gambar 2", type=["jpg", "png", "jpeg"])
+uploaded_file1 = st.file_uploader("Upload Gambar Kaki Kiri", type=["jpg", "png", "jpeg"])
+uploaded_file2 = st.file_uploader("Upload Gambar Kaki Kanan", type=["jpg", "png", "jpeg"])
 
 if uploaded_file1 is not None and uploaded_file2 is not None:
     col1, col2 = st.columns(2)
     with col1:
-        st.image(uploaded_file1, caption='Gambar 1', width=150)
+        st.image(uploaded_file1, caption='Kaki Kiri', width=200)
     with col2:
-        st.image(uploaded_file2, caption='Gambar 2', width=150)
+        st.image(uploaded_file2, caption='Kaki Kanan', width=200)
 elif uploaded_file1 is not None:
-    st.image(uploaded_file1, caption='Gambar 1', width=150)
+    st.image(uploaded_file1, caption='Kaki Kiri', width=200)
 elif uploaded_file2 is not None:
-    st.image(uploaded_file2, caption='Gambar 2', width=150)
+    st.image(uploaded_file2, caption='Kaki kanan', width=200)
     
 # membagi kolom
 col1, col2 = st.columns(2)
